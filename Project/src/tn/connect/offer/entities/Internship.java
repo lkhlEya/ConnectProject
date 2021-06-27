@@ -5,66 +5,15 @@ import java.text.SimpleDateFormat;
 * @author Thinkpad
 */
 
-public class Internship {
-    private int id;
-    private String company;
+public class Internship extends Offer {
+
     private SimpleDateFormat startDate = new SimpleDateFormat("yyyy-MM-dd");
     private SimpleDateFormat endDate = new SimpleDateFormat("yyyy-MM-dd");
-    private String theme;
-    private String title;
-    private String description;
-    private String candidat;
-    // the type of the candidat attribute should be changed to student
-    
-    
-    public Stages(int id, String company, String theme, String title
-            , String description, String candidat) {
-        this.id = id;
-        this.company = company;
-        this.theme = theme;
-        this.title = title;
-        this.description = description;
-        this.candidat = candidat;
-    }
+    private String supervisor ;
 
-    public int getId() {
-        return id;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public SimpleDateFormat getStartDate() {
-        return startDate;
-    }
-
-    public SimpleDateFormat getEndDate() {
-        return endDate;
-    }
-
-    public String getTheme() {
-        return theme;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getCandidat() {
-        return candidat;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
+    public Internship(String supervisor, int id, String company, String field, String description) {
+        super(id, company, field, description);
+        this.supervisor = supervisor;
     }
 
     public void setStartDate(SimpleDateFormat startDate) {
@@ -75,28 +24,21 @@ public class Internship {
         this.endDate = endDate;
     }
 
-    public void setTheme(String theme) {
-        this.theme = theme;
+    public void setSupervisor(String supervisor) {
+        this.supervisor = supervisor;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public SimpleDateFormat getStartDate() {
+        return startDate;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public SimpleDateFormat getEndDate() {
+        return endDate;
     }
 
-    public void setCandidat(String candidat) {
-        this.candidat = candidat;
+    public String getSupervisor() {
+        return supervisor;
     }
-
-    @Override
-    public String toString() {
-        return "Stages{" + "id=" + id + ", company=" + company + ", startDate=" 
-                + startDate + ", endDate=" + endDate + ", theme=" + theme + ", "
-                + "title=" + title + ", description=" + description + 
-                ", candidat=" + candidat + '}';
-    }
+    
 
 }
