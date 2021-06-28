@@ -6,19 +6,35 @@ public class Offer {
     private String company;
     private String field;
     private String description;
+    private String title;
+    private String status;
 
-    public Offer(int id, String company, String field, String description) {
+    public Offer(int id, String company, String field, String description, String title, String status) {
         this.id = id;
         this.company = company;
         this.field = field;
         this.description = description;
+        this.title = title;
+        this.status = status;
     }
 
-    public Offer(int id2, String company2, String field2, String description2, String title, String status) {
-		// TODO Auto-generated constructor stub
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public int getId() {
+    public String getStatus() {
+        return status;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getId() {
         return id;
     }
 
@@ -54,8 +70,5 @@ public class Offer {
     public String toString() {
         return "Offer{" + "id=" + id + ", company=" + company + ", field=" + field + ", description=" + description + '}';
     }
-    
-    
-    
-    
+
 }
