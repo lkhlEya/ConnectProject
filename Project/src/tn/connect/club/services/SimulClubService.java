@@ -1,31 +1,32 @@
 package tn.connect.club.services;
 
-import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 import tn.connect.club.entities.Club;
+import tn.connect.club.entities.SimulClub;
 import tn.connect.commun.utils.DBConnection;
 
-public class ClubService {
-
+public class SimulClubService {
+	
 	private Connection cnx;
 	private Statement st;
 	private PreparedStatement pre;
-
-	public ClubService() {
-		cnx = DBConnection.getInstance().getCnx();
-	}
+	
+	 public SimulClubService() {
+			cnx = DBConnection.getInstance().getCnx();
+	   };
 
 	public void createClub(Club c) throws SQLException {
 
 		try {
-			String req = "INSERT INTO CLUB (name," + "	university," + "	institue," + "	status,"
+			String req = "INSERT INTO SIMULCLUB (name," + "	university," + "	institue," + "	status,"
 					+ "description) values ('" + c.getName() + "','" + c.getUniversity() + "','" + c.getInstitue()
 					+ "','" + c.getStatus() + "','" + c.getDescription() + "');";
 
@@ -42,7 +43,7 @@ public class ClubService {
 	public void updateClub(Club c) throws SQLException {
 
 		try {
-			String req = "UPDATE CLUB SET university =" + c.getUniversity() + "	,institue = " + c.getInstitue()
+			String req = "UPDATE SIMULCLUB SET university =" + c.getUniversity() + "	,institue = " + c.getInstitue()
 					+ "	,status = " + c.getStatus() + ",description =" + c.getDescription() + " WHERE id_club = "
 					+ c.getStatus() + ";";
 
@@ -56,37 +57,28 @@ public class ClubService {
 		}
 	}
 
-	
-	 public boolean deleteClub(Long idClub) throws SQLException{
-	        
-			String sql = "UPDATE CLUB SET status = 'HEXP' WHERE id_club = " + idClub;
-	        
-	        Statement ste = cnx.createStatement();
-	                
-	        if (ste.executeUpdate(sql) == 1) {
-	            return true;
-	        }
-	        
-	        return false ;
-	    }
+	public void deleteClub(int idSimulClub) {
+		String sql = "UPDATE CLUB SET status = 'HEXP' WHERE id_club = " + idSimulClub;
+
+	}
 
 	public List<Club> ReadListClub() throws SQLException {
 		List<Club> clubs = new ArrayList<>();
 
 		try {
-			String sql = "SELECT * FROM CLUB; ";
+			String sql = "SELECT * FROM SIMULCLUB; ";
 			Statement ste = cnx.createStatement();
 			ResultSet rs = ste.executeQuery(sql);
 			while (rs.next()) {
 
-				Long idClub = rs.getLong("idClub");
+				Long idSimulClub = rs.getLong("idSimulClub");
 				String name = rs.getString("name");
 				String university = rs.getString("university");
 				String institue = rs.getString("institue");
 				String status = rs.getString("status");
 				String description = rs.getString("description");
 
-				Club club = new Club(idClub, name, university, institue, status, description);
+				Club club = new Club(idSimulClub, name, university, institue, status, description);
 				clubs.add(club);
 
 			}
@@ -98,22 +90,27 @@ public class ClubService {
 		return clubs;
 	}
 
-	public Club ReadClub(Long idClub) throws SQLException {
-		Club club = new Club(idClub, null, null, null, null, null);
+	public SimulClub ReadClub(Long idSimulClub) throws SQLException {
+		SimulClub simulClub = new SimulClub(idSimulClub, null, null, null, null, null, null);
 		try {
-			String sql = "SELECT * FROM CLUB WHERE  WHERE id_club = " + idClub + ";";
+			String sql = "SELECT * FROM CLUB WHERE  WHERE id_club = " + idSimulClub + ";";
 			Statement ste = cnx.createStatement();
 			ResultSet rs = ste.executeQuery(sql);
-			club.setDescription(rs.getString("description"));
-			club.setInstitue( rs.getString("institue"));
-			club.setName(rs.getString("name"));
-			club.setStatus(rs.getString("status"));
-			club.setUniversity(rs.getString("university"));
+
+			simulClub.setCreationDate(rs.getDate("creation_date"));
+			simulClub.setDescription(rs.getString("description"));
+			simulClub.setInstitue( rs.getString("institue"));
+			simulClub.setName(rs.getString("name"));
+			simulClub.setStatus(rs.getString("status"));
+			simulClub.setUniversity(rs.getString("university"));
+			
+
 		} catch (SQLException e) {
 			System.out.println("Problem while Selecting from CLUB");
 
 		}
 
-		return club;
+		return simulClub;
 	}
+
 }

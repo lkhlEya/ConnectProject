@@ -1,26 +1,28 @@
 package tn.connect.club.entities;
 
+import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 public class SimulClub{
 
+	
 	private Long idSimulClub;
 	private String name;
 	private String university;
 	private String institue;
 	private String status;
-    private SimpleDateFormat creationDate = new SimpleDateFormat("yyyy-MM-dd");
+    private Date creationDate;
 	private String description;
 
 	
-	public SimulClub(Long idSimulClub,String name,String university,String institue,String status,String description,SimpleDateFormat creationDate) 
+	public SimulClub(Long idSimulClub,String name,String university,String institue,String status,String description,Date creationDate) 
 	{
 		this.idSimulClub = idSimulClub;
 		this.institue = institue;
 		this.name = name;
 		this.status = status;
 		this.university = university;
-		this.setDescription(description);
+		this.description = description;
 		this.creationDate = creationDate;
 	}
 
@@ -72,16 +74,16 @@ public class SimulClub{
 	
 	@Override
 	public String toString() {
-        return "Club{" + "id=" + idSimulClub + ", name=" + name +", university=" + university +  ", institue=" +institue  + '}';
+        return "SimulClub{" + "id=" + idSimulClub + ", name=" + name +", university=" + university +  ", institue=" +institue  + '}';
 	}
 
 
-	public SimpleDateFormat getCreationDate() {
+	public Date getCreationDate() {
 		return creationDate;
 	}
 
 
-	public void setCreationDate(SimpleDateFormat creationDate) {
+	public void setCreationDate(Date creationDate) {
 		this.creationDate = creationDate;
 	}
 
