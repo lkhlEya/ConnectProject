@@ -14,7 +14,11 @@ public class Offer {
         this.description = description;
     }
 
-    public int getId() {
+    public Offer(int id2, String company2, String field2, String description2, String title, String status) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getId() {
         return id;
     }
 

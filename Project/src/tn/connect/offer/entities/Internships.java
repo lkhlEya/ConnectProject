@@ -1,5 +1,5 @@
 package tn.connect.offer.entities;
-import Entities.Stages.Offer;
+import tn.connect.offer.entities.Offer;
 import java.text.SimpleDateFormat;
 /**
 *
