@@ -39,8 +39,9 @@ public class InternshipService {
 
         System.out.println("Values Inserted");
     }
-        public void deleteWork(int id) {
-        String sql = "DELETE FROM Work where id = " + id;
+
+    public void deleteInternship(int id) {
+        String sql = "UPDATE internship SET status = 'HEXP' WHERE id= " + id;
 
     }
 

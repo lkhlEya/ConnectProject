@@ -46,7 +46,7 @@ public class WorkService {
     }
 
     public void deleteWork(int id) {
-        String sql = "DELETE FROM Work where id = " + id;
+        String sql = "UPDATE work SET status = 'HEXP' WHERE id= " + id;
 
     }
 
