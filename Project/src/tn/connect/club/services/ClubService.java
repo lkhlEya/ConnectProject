@@ -44,7 +44,7 @@ public class ClubService {
 		try {
 			String req = "UPDATE CLUB SET university =" + c.getUniversity() + "	,institue = " + c.getInstitue()
 					+ "	,status = " + c.getStatus() + ",description =" + c.getDescription() + " WHERE id_club = "
-					+ c.getStatus() + ";";
+					+ c.getIdClub() + ";";
 
 			Statement ste = cnx.createStatement();
 			ste.executeUpdate(req);
