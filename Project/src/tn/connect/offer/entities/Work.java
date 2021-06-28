@@ -1,15 +1,20 @@
 package tn.connect.offer.entities;
 
+import Entities.Stages.Offer;
+import java.text.SimpleDateFormat;
+
 public class Work extends Offer {
     private String agreementType;
     private String position;
     SimpleDateFormat startDate = new SimpleDateFormat("yyyy-MM-dd");
 
-    public Work(String agreementType, String position, int id, String company, String field, String description) {
-        super(id, company, field, description);
+    public Work(String agreementType, String position, int id, String company, String field, String description, String title, String Status) {
+        super(id, company, field, description, title, Status);
         this.agreementType = agreementType;
         this.position = position;
     }
+
+    
 
     public String getAgreementType() {
         return agreementType;

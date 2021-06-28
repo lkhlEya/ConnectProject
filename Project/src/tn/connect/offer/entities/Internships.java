@@ -1,4 +1,5 @@
 package tn.connect.offer.entities;
+import Entities.Stages.Offer;
 import java.text.SimpleDateFormat;
 /**
 *
@@ -11,10 +12,11 @@ public class Internships extends Offer {
     private SimpleDateFormat endDate = new SimpleDateFormat("yyyy-MM-dd");
     private String supervisor ;
 
-    public Internship(String supervisor, int id, String company, String field, String description) {
-        super(id, company, field, description);
+    public Internships(String supervisor, int id, String company, String field, String description, String title, String Status) {
+        super(id, company, field, description, title, Status);
         this.supervisor = supervisor;
     }
+
 
     public void setStartDate(SimpleDateFormat startDate) {
         this.startDate = startDate;
