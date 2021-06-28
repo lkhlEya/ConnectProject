@@ -1,22 +1,28 @@
 package tn.connect.offer.entities;
-import tn.connect.offer.entities.Offer;
-import java.text.SimpleDateFormat;
-/**
-*
-* @author Thinkpad
-*/
 
+import java.text.SimpleDateFormat;
+
+/**
+ *
+ * @author Thinkpad
+ */
 public class Internships extends Offer {
 
     private SimpleDateFormat startDate = new SimpleDateFormat("yyyy-MM-dd");
     private SimpleDateFormat endDate = new SimpleDateFormat("yyyy-MM-dd");
-    private String supervisor ;
+    private String supervisor;
 
-    public Internships(String supervisor, int id, String company, String field, String description, String title, String Status) {
-        super(id, company, field, description, title, Status);
-        this.supervisor = supervisor;
+    public Internships() {
+
     }
 
+    public Internships(String supervisor, int id, String company, String field, String description, String title, String status) {
+        super(id, company, field, description, title, status);
+        this.supervisor = supervisor;
+        this.endDate = endDate;
+        this.startDate = startDate;
+        
+    }
 
     public void setStartDate(SimpleDateFormat startDate) {
         this.startDate = startDate;
@@ -41,6 +47,5 @@ public class Internships extends Offer {
     public String getSupervisor() {
         return supervisor;
     }
-    
 
 }
