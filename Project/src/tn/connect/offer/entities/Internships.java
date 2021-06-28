@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 * @author Thinkpad
 */
 
-public class Internship extends Offer {
+public class Internships extends Offer {
 
     private SimpleDateFormat startDate = new SimpleDateFormat("yyyy-MM-dd");
     private SimpleDateFormat endDate = new SimpleDateFormat("yyyy-MM-dd");

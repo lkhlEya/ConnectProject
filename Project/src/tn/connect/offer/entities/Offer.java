@@ -1,38 +1,54 @@
 package tn.connect.offer.entities;
 
-public class Work extends Offer {
-    private String agreementType;
-    private String position;
-    SimpleDateFormat startDate = new SimpleDateFormat("yyyy-MM-dd");
+public class Offer {
 
-    public Work(String agreementType, String position, int id, String company, String field, String description) {
-        super(id, company, field, description);
-        this.agreementType = agreementType;
-        this.position = position;
+    private int id;
+    private String company;
+    private String field;
+    private String description;
+
+    public Offer(int id, String company, String field, String description) {
+        this.id = id;
+        this.company = company;
+        this.field = field;
+        this.description = description;
     }
 
-    public String getAgreementType() {
-        return agreementType;
+    public int getId() {
+        return id;
     }
 
-    public String getPosition() {
-        return position;
+    public String getCompany() {
+        return company;
     }
 
-    public SimpleDateFormat getStartDate() {
-        return startDate;
+    public String getField() {
+        return field;
     }
 
-    public void setAgreementType(String agreementType) {
-        this.agreementType = agreementType;
+    public String getDescription() {
+        return description;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setStartDate(SimpleDateFormat startDate) {
-        this.startDate = startDate;
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public void setField(String field) {
+        this.field = field;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Offer{" + "id=" + id + ", company=" + company + ", field=" + field + ", description=" + description + '}';
     }
     
     
