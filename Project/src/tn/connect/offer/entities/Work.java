@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 
 public class Work extends Offer {
 
-    private String agreementType;
+    private String agreementType; 
     private String position;
     private SimpleDateFormat startDate = new SimpleDateFormat("yyyy-MM-dd");
     

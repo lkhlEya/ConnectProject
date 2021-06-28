@@ -20,7 +20,7 @@ public class Internships extends Offer {
         super(id, company, field, description, title, status);
         this.supervisor = supervisor;
         this.endDate = endDate;
-        this.startDate = startDate;
+        this.startDate = startDate; 
         
     }
 

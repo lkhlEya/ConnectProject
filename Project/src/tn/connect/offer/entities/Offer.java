@@ -25,7 +25,7 @@ public class Offer {
     public String getStatus() {
         return status;
     }
-
+ 
     public void setTitle(String title) {
         this.title = title;
     }

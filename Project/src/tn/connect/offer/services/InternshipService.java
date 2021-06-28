@@ -22,7 +22,7 @@ public class InternshipService {
         cnx = DBConnection.getInstance().getCnx();
 
     }
-
+ 
     public void addInternship(Internships i) throws SQLException {
         String req = "INSERT INTO INTERNSHIP (company,field,title,description, start_date,end_date,supervisor,status) values ('"
                 + i.getCompany() + "','"

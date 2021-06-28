@@ -22,7 +22,7 @@ public class WorkService {
         cnx = DBConnection.getInstance().getCnx();
 
     }
-
+ 
     public void addWork(Work w) throws SQLException {
         String req = "INSERT INTO WORK (company,field,title,description, "
                 + "start_date,agreementType,position,status) values ('"
