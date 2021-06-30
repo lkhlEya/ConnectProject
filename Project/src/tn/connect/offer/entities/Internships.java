@@ -1,6 +1,6 @@
 package tn.connect.offer.entities;
 
-import java.text.SimpleDateFormat;
+import java.sql.Date;
 
 /**
  *
@@ -8,27 +8,46 @@ import java.text.SimpleDateFormat;
  */
 public class Internships extends Offer {
 
-    private SimpleDateFormat startDate = new SimpleDateFormat("yyyy-MM-dd");
-    private SimpleDateFormat endDate = new SimpleDateFormat("yyyy-MM-dd");
+    private Date startDate;
+    private Date endDate;
     private String supervisor;
 
-    public Internships() {
 
-    }
 
-    public Internships(String supervisor, int id, String company, String field, String description, String title, String status) {
+    public Internships(int id,
+            String company,
+            String field,
+            String title,
+            String description,
+            Date startDate,
+            Date endDate,
+            String supervisor,
+            String status) {
         super(id, company, field, description, title, status);
         this.supervisor = supervisor;
         this.endDate = endDate;
-        this.startDate = startDate; 
-        
-    }
+        this.startDate = startDate;
 
-    public void setStartDate(SimpleDateFormat startDate) {
+    }
+    public Internships(String company,
+            String field,
+            String title,
+            String description,
+            Date startDate,
+            Date endDate,
+            String supervisor,
+            String status) {
+        super(company, field, description, title, status);
+        this.supervisor = supervisor;
+        this.endDate = endDate;
+        this.startDate = startDate;
+
+    }
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public void setEndDate(SimpleDateFormat endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 
@@ -36,11 +55,11 @@ public class Internships extends Offer {
         this.supervisor = supervisor;
     }
 
-    public SimpleDateFormat getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public SimpleDateFormat getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
