@@ -23,12 +23,13 @@ public class SimulClubService {
 			cnx = DBConnection.getInstance().getCnx();
 	   };
 
-	public void createClub(Club c) throws SQLException {
+	public void createSimulClub(SimulClub c) throws SQLException {
 
 		try {
 			String req = "INSERT INTO SIMULCLUB (name," + "	university," + "	institue," + "	status,"
 					+ "description) values ('" + c.getName() + "','" + c.getUniversity() + "','" + c.getInstitue()
-					+ "','" + c.getStatus() + "','" + c.getDescription() + "');";
+					+ "','" + c.getStatus() + "','" + c.getDescription() + ",creation_date = to_char("+ c.getCreationDate()
+							+ ",'j')');";
 
 			Statement ste = cnx.createStatement();
 			ste.executeUpdate(req);
