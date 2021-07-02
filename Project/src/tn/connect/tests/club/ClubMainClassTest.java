@@ -2,7 +2,7 @@ package tn.connect.tests.club;
 
 import java.sql.SQLException;
 
-import tn.connect.gui.club.Club;
+import tn.connect.entities.club.Club;
 import tn.connect.services.club.ClubService;
 import tn.connect.utils.commun.DBConnection;
 

@@ -1,4 +1,4 @@
-package tn.connect.gui.commun;
+package tn.connect.services.commun;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

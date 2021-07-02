@@ -9,8 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import tn.connect.gui.club.Club;
-import tn.connect.gui.club.SimulClub;
+import tn.connect.entities.club.Club;
+import tn.connect.entities.club.SimulClub;
 import tn.connect.utils.commun.DBConnection;
 
 public class SimulClubService {
