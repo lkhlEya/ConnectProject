@@ -22,7 +22,7 @@ public class WorkService {
         cnx = DBConnection.getInstance().getCnx();
 
     }
- 
+
     public void addWork(Work w) throws SQLException {
         String req = "INSERT INTO WORK (company,field,title,description, "
                 + "start_date,agreementType,position,status) values ('"
@@ -51,25 +51,34 @@ public class WorkService {
     }
 
     public List<Work> retrieveWorks() throws SQLException {
-        List<Work> Work = new ArrayList<>();
-        String sql = "SELECT * FROM Work; ";
-        Statement ste = cnx.createStatement();
-        ResultSet rs = ste.executeQuery(sql);
-        while (rs.next()) {
-            Work w = new Work();
+        List<Work> works = new ArrayList<>();
 
-            int id = rs.getInt("id");
-            String company = rs.getString("company");
-            String field = rs.getString("field");
-            String title = rs.getString("title");
-            String description = rs.getString("description");
-            Date startDate = rs.getDate("start_date");
-            String agreementType = rs.getString("agreementType");
-            String position = rs.getString("position");
-            String status = rs.getString("status");
+        try {
+            String sql = "SELECT * FROM work; ";
+            Statement ste = cnx.createStatement();
+            ResultSet rs = ste.executeQuery(sql);
+            while (rs.next()) {
+
+                int id = rs.getInt("id");
+                String company = rs.getString("company");
+                String field = rs.getString("field");
+                String title = rs.getString("title");
+                String description = rs.getString("description");
+                Date startDate = rs.getDate("start_date");
+                String agreementType = rs.getString("agreementType");
+                String position = rs.getString("position");
+                String status = rs.getString("status");
+
+                Work w = new Work(id, company, field, title, description, startDate, agreementType, position, status);
+
+                works.add(w);
+
+            }
+        } catch (SQLException e) {
+            System.out.println("Problem while Selecting from Work");
 
         }
 
-        return Work;
+        return works;
     }
 }

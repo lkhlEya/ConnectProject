@@ -18,6 +18,14 @@ public class Offer {
         this.status = status;
     }
 
+    public Offer(String company, String field, String description, String title, String status) {
+        this.company = company;
+        this.field = field;
+        this.description = description;
+        this.title = title;
+        this.status = status;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -25,7 +33,7 @@ public class Offer {
     public String getStatus() {
         return status;
     }
- 
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -68,7 +76,8 @@ public class Offer {
 
     @Override
     public String toString() {
-        return "Offer{" + "id=" + id + ", company=" + company + ", field=" + field + ", description=" + description + '}';
+        return "Offer{" + "id=" + id + ", company=" + company + ", field="
+                + field + ", description=" + description + '}';
     }
 
 }
