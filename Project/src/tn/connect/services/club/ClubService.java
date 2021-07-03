@@ -2,7 +2,6 @@ package tn.connect.services.club;
 
 import java.sql.Statement;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,8 +14,7 @@ import tn.connect.utils.commun.DBConnection;
 public class ClubService {
 
 	private Connection cnx;
-	private Statement st;
-	private PreparedStatement pre;
+
 
 	public ClubService() {
 		cnx = DBConnection.getInstance().getCnx();
@@ -42,12 +40,17 @@ public class ClubService {
 	public void updateClub(Club c) throws SQLException {
 
 		try {
-			String req = "UPDATE CLUB SET university =" + c.getUniversity() + "	,institue = " + c.getInstitue()
-					+ "	,status = " + c.getStatus() + ",description =" + c.getDescription() + " WHERE id_club = "
-					+ c.getIdClub() + ";";
-
-			Statement ste = cnx.createStatement();
-			ste.executeUpdate(req);
+			String req = "UPDATE CLUB SET university = ? ,institue = ? 	,status = ?,description = ? WHERE id_club = ? ;";
+			
+			PreparedStatement pre = cnx.prepareStatement(req);
+			  
+		        pre.setString(1, c.getUniversity());
+		        pre.setString(2, c.getInstitue());
+		        pre.setString(3, c.getStatus());
+		        pre.setString(4, c.getDescription());
+		        pre.setLong(5, c.getIdClub());
+			
+			  pre.executeUpdate();
 
 			System.out.println("Values Updated");
 
@@ -59,13 +62,19 @@ public class ClubService {
 	
 	 public boolean deleteClub(Long idClub) throws SQLException{
 	        
-			String sql = "UPDATE CLUB SET status = 'HEXP' WHERE id_club = " + idClub;
-	        
-	        Statement ste = cnx.createStatement();
-	                
-	        if (ste.executeUpdate(sql) == 1) {
-	            return true;
-	        }
+			try {
+				String req = "UPDATE CLUB SET status = 'HEXP' WHERE id_club = ? ;";
+				
+				PreparedStatement pre = cnx.prepareStatement(req);
+
+		        pre.setLong(1, idClub);
+
+				if (pre.executeUpdate() == 1) {
+				    return true;
+				}
+			} catch (SQLException e) {
+				System.out.println("Problem While Deleting from CLUB"+e.getMessage());
+			}
 	        
 	        return false ;
 	    }
@@ -79,7 +88,7 @@ public class ClubService {
 			ResultSet rs = ste.executeQuery(sql);
 			while (rs.next()) {
 
-				Long idClub = rs.getLong("idClub");
+				Long idClub = rs.getLong("id_club");
 				String name = rs.getString("name");
 				String university = rs.getString("university");
 				String institue = rs.getString("institue");
@@ -91,7 +100,7 @@ public class ClubService {
 
 			}
 		} catch (SQLException e) {
-			System.out.println("Problem while Selecting from CLUB");
+			System.out.println("Problem while Selecting from CLUB"+e.getMessage());
 
 		}
 
@@ -101,14 +110,18 @@ public class ClubService {
 	public Club ReadClub(Long idClub) throws SQLException {
 		Club club = new Club(idClub, null, null, null, null, null);
 		try {
-			String sql = "SELECT * FROM CLUB WHERE  WHERE id_club = " + idClub + ";";
+			String sql = "SELECT * FROM CLUB WHERE id_club = " + idClub + ";";
 			Statement ste = cnx.createStatement();
 			ResultSet rs = ste.executeQuery(sql);
-			club.setDescription(rs.getString("description"));
-			club.setInstitue( rs.getString("institue"));
-			club.setName(rs.getString("name"));
-			club.setStatus(rs.getString("status"));
-			club.setUniversity(rs.getString("university"));
+			if (rs.first())
+			{
+				club.setDescription(rs.getString("description"));
+				club.setInstitue( rs.getString("institue"));
+				club.setName(rs.getString("name"));
+				club.setStatus(rs.getString("status"));
+				club.setUniversity(rs.getString("university"));
+			}
+
 		} catch (SQLException e) {
 			System.out.println("Problem while Selecting from CLUB");
 
