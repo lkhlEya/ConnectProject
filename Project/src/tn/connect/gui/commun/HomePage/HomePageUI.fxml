@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.connect.gui.HomePage.HomePageUIController">
+   <children>
+      <Group>
+         <children>
+            <ImageView blendMode="SRC_ATOP" fitHeight="1093.0" fitWidth="1942.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../media/Homepage.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="112.0" layoutY="367.0" prefHeight="133.0" prefWidth="828.0" text="Welcome to CONNECT" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="75.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="121.0" layoutY="567.0" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="10.0" text="Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio &#10;mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa&#10;vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis &#10;aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris&#10;hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.&#10;" wrappingWidth="754.689453125">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Button layoutX="230.0" layoutY="759.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="484.0" style="-fx-background-color: #f28b25;" text="Button" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+         </children>
+      </Group>
+      <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1983.0">
+         <children>
+            <Group id="header">
+               <children>
+                  <Pane id="headerPane" layoutX="48.0" layoutY="50.0" prefHeight="96.0" prefWidth="1908.0">
+                     <children>
+                        <ImageView fitHeight="46.0" fitWidth="82.0" layoutX="1822.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../media/979DB1User.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="65.0" fitWidth="234.0" layoutX="29.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../media/greyLogo.png" />
+                           </image>
+                        </ImageView>
+                        <Hyperlink layoutX="1142.0" layoutY="35.0" text="Home" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Hyperlink>
+                        <Hyperlink layoutX="1252.0" layoutY="35.0" text="Club" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Hyperlink>
+                         <Hyperlink layoutX="1365.0" layoutY="35.0" text="Event" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Hyperlink>
+                         <Hyperlink layoutX="1485.0" layoutY="35.0" text="Company" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Hyperlink>
+                        <Hyperlink layoutX="1643.0" layoutY="35.0" text="Guide" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Hyperlink>
+                     </children>
+                  </Pane>
+               </children>
+            </Group>
+         </children>
+      </HBox>
+      <Avatar />
+   </children>
+</AnchorPane>
