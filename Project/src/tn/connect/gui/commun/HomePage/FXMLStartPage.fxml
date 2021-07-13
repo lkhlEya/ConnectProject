@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="342.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User.gui.FXMLStartPage">
+   <children>
+      <ImageView fx:id="back" fitHeight="344.0" fitWidth="607.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Connect/src/media/Homepage.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogIn" layoutX="109.0" layoutY="240.0" mnemonicParsing="false" mouseTransparent="true" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #22427C;" text="Log in" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect></Button>
+      <Button fx:id="btnRN" layoutX="247.0" layoutY="240.0" mnemonicParsing="false" onAction="#AddUser" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #22427C;" text="Register Now" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Text fx:id="tfText1" layoutX="50.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active job offers. Active recruiters." textAlignment="CENTER" wrappingWidth="175.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="0.2142857142857143" endY="0.3285714285714285">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Text fx:id="tfText11" layoutX="27.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO CONNECT" wrappingWidth="272.0">
+         <fill>
+            <LinearGradient endX="0.2142857142857143" endY="0.3285714285714285">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Pane layoutX="9.0" layoutY="3.0" prefHeight="64.0" prefWidth="580.0">
+         <children>
+            <ImageView fx:id="tfLogo" fitHeight="64.0" fitWidth="214.0" layoutX="-6.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../media/0A255ALogo.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="hlHome" layoutX="241.0" layoutY="19.0" text="Home" textFill="WHITE" />
+            <Hyperlink fx:id="hlEvent" layoutX="389.0" layoutY="19.0" text="EVENT" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Hyperlink fx:id="hlClub" layoutX="328.0" layoutY="22.0" text="CLUB" textFill="WHITE" />
+      <Hyperlink fx:id="hlCompany" layoutX="465.0" layoutY="21.0" text="COMPANY" textFill="WHITE" />
+      <ImageView fitHeight="39.0" fitWidth="44.0" layoutX="553.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Connect/src/media/0A255AUser.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

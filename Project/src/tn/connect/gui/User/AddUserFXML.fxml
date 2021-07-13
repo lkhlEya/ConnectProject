@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User.gui.AddUserFXMLController">
+   <children>
+      <SplitPane dividerPositions="0.16331658291457288" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Text layoutX="47.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register now it's quick and easy" wrappingWidth="350.541015625">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="24.0" layoutY="38.0" text="First Name" />
+                  <TextField fx:id="tfFirstName" layoutX="99.0" layoutY="36.0" opacity="0.71" prefHeight="25.0" prefWidth="195.0" promptText="Your name" />
+                  <TextField fx:id="tfLastName" layoutX="100.0" layoutY="78.0" opacity="0.7" prefHeight="25.0" prefWidth="195.0" promptText="Family name" />
+                  <TextField fx:id="tfEmail" layoutX="100.0" layoutY="117.0" opacity="0.7" prefHeight="25.0" prefWidth="195.0" promptText="Exemple: wissal.yermani@esprit.tn" />
+                  <DatePicker fx:id="tfdate" layoutX="100.0" layoutY="200.0" opacity="0.7" prefHeight="25.0" prefWidth="174.0" promptText="JJ/MM/AAAA" />
+                  <RadioButton fx:id="rbw" layoutX="99.0" layoutY="252.0" mnemonicParsing="false" text="Women" />
+                  <RadioButton fx:id="rbM" layoutX="188.0" layoutY="252.0" mnemonicParsing="false" text="Men" />
+                  <PasswordField fx:id="tfPassword" layoutX="100.0" layoutY="158.0" prefHeight="25.0" prefWidth="195.0" promptText="New password" />
+                  <Label layoutX="24.0" layoutY="82.0" text="Last Name" />
+                  <Label layoutX="24.0" layoutY="121.0" text="E-mail" />
+                  <Label layoutX="21.0" layoutY="162.0" text="Password" />
+                  <Label layoutX="18.0" layoutY="204.0" text="Date of birth " />
+                  <Label layoutX="24.0" layoutY="252.0" text="Kind ?">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnSave" layoutX="223.0" layoutY="282.0" mnemonicParsing="false" onAction="#AddUser" opacity="0.7" prefHeight="34.0" prefWidth="159.0" text="Register now">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
