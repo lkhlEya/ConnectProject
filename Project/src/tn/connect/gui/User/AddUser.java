@@ -15,16 +15,19 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
  *
  * @author Wissal
  */
-public class AddUserFXMLController implements Initializable {
+public class AddUser implements Initializable {
 
     @FXML
     private TextField tfFirstName;
@@ -44,6 +47,28 @@ public class AddUserFXMLController implements Initializable {
     private RadioButton rbw;
     @FXML
     private RadioButton rbM;
+    @FXML
+    private Text titleSave;
+    @FXML
+    private Label tFirstName;
+    @FXML
+    private Label tLastName;
+    @FXML
+    private Label tEmail;
+    @FXML
+    private Label tPassword;
+    @FXML
+    private Label tDateB;
+    @FXML
+    private Label tGender;
+    @FXML
+    private Label tClub;
+    @FXML
+    private TextField tfFirstName1;
+    @FXML
+    private PasswordField tfClub;
+    @FXML
+    private ImageView lgSave;
 
     /**
      * Initializes the controller class.

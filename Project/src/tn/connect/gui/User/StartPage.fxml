@@ -10,11 +10,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="342.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User.gui.FXMLStartPage">
+<AnchorPane id="AnchorPane" prefHeight="342.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User.gui.StartPage">
    <children>
       <ImageView fx:id="background" fitHeight="344.0" fitWidth="607.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../media/Homepage.png" />
+            <Image url="@../../media/Homepage.png" />
          </image>
       </ImageView>
       <Button fx:id="btnLogIn" layoutX="109.0" layoutY="240.0" mnemonicParsing="false" mouseTransparent="true" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #22427C;" text="Log in" textAlignment="CENTER" textFill="WHITE">
@@ -58,12 +58,12 @@
          <children>
             <ImageView fx:id="tfLogo" fitHeight="64.0" fitWidth="214.0" layoutX="-6.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../media/0A255ALogo.png" />
+                  <Image url="@../../media/0A255ALogo.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="39.0" fitWidth="44.0" layoutX="538.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../media/0A255AUser.png" />
+                  <Image url="@../../media/0A255AUser.png" />
                </image>
             </ImageView>
          </children>

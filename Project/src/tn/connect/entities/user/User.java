@@ -5,7 +5,7 @@
  */
 package User.entities;
 
-import static com.sun.media.jfxmediaimpl.MediaUtils.error;
+import java.sql.Date;
 
 /**
  *
@@ -13,40 +13,41 @@ import static com.sun.media.jfxmediaimpl.MediaUtils.error;
  */
 public class User {
     private int id_user;
-    private String name_user;
-    private String lastName_user;
-    private String Club_user;
-    private String login_user;
-    private String password_user;
+    private String FirstName;
+    private String LastName;
+    private String Club;
+    private String Email;
+    private String Password;
+    private Date DateBirth ;
+    private String Gender;
+    
     
     public User () {
     }
   
 
-    public User(int id_user, String name_user, String lastName_user, String Club_user, String login_user, String password_user) {
+    public User(int id_user, String FirstName, String LastName, String Club, String Email, String Password, Date DateBirth, String Kind ) {
         this.id_user = id_user;
-        this.name_user = name_user;
-        this.lastName_user = lastName_user;
-        this.Club_user = Club_user;
-        this.login_user = login_user;
-        this.password_user = password_user;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.Club = Club;
+        this.Email = Email;
+        this.Password = Password;
+        this.DateBirth= DateBirth;
+        this.Gender= Gender;
         
     }
-    
-    public User( String name_user, String lastName_user) {
-      
-        this.name_user = name_user;
-        this.lastName_user = lastName_user;
-    }
-    
-    
-    public User( int id_user, String name_user, String lastName_user) {
-        this.id_user = id_user;
-        this.name_user = name_user;
-        this.lastName_user = lastName_user;
-    }
 
-    
+    public User(String FirstName, String LastName) {
+       this.FirstName = FirstName;
+        this.LastName = LastName;
+    }
+    public User( int id_user, String FirstName, String LastName) {
+      
+        this.id_user = id_user;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+    }
 
     public int getId_user() {
         return id_user;
@@ -56,50 +57,69 @@ public class User {
         this.id_user = id_user;
     }
 
-    public String getName_user() {
-        return name_user;
+    public String getFirstName() {
+        return FirstName;
     }
 
-    public void setName_user(String name_user) {
-        this.name_user = name_user;
+    public void setFirstName(String FirstName) {
+        this.FirstName = FirstName;
     }
 
-    public String getlastName_user() {
-        return lastName_user;
+    public String getLastName() {
+        return LastName;
     }
 
-    public void setlastName_user(String lastName_user) {
-        this.lastName_user = lastName_user;
+    public void setLastName(String LastName) {
+        this.LastName = LastName;
     }
 
-    public String getClub_user() {
-        return Club_user;
+    public String getClub() {
+        return Club;
     }
 
-    public void setClub_user(String Club_user) {
-        this.Club_user = Club_user;
+    public void setClub(String Club) {
+        this.Club = Club;
     }
 
-    public String getLogin_user() {
-        return login_user;
+    public String getEmail() {
+        return Email;
     }
 
-    public void setLogin_user(String login_user) {
-        this.login_user = login_user;
+    public void setEmail(String Email) {
+        this.Email = Email;
     }
 
-    public String getPassword_user() {
-        return password_user;
+    public String getPassword() {
+        return Password;
     }
 
-    public void setPassword_user(String password_user) {
-        this.password_user = password_user;
+    public void setPassword(String Password) {
+        this.Password = Password;
     }
-    
+
+    public Date getDateBirth() {
+        return DateBirth;
+    }
+
+    public void setDateBirth(Date DateBirth) {
+        this.DateBirth = DateBirth;
+    }
+
+    public String getGender() {
+        return Gender;
+    }
+
+    public void setGender(String Gender) {
+        this.Gender = Gender;
+    }
+
     @Override
     public String toString() {
-        return "User{" + "id_user=" + id_user + ", name_user=" + name_user + ", lastName_user=" + lastName_user + ", Club_user=" + Club_user + ", login_user=" + login_user + ", password_user=" + password_user + '}';
+        return "User{" + "id_user=" + id_user + ", FirstName=" + FirstName + ", LastName=" + LastName + ", Club=" + Club + ", Email=" + Email + ", Password=" + Password + ", DateBirth=" + DateBirth + ", Gender=" + Gender + '}';
     }
-    }
+
+}
+    
+   
     
 

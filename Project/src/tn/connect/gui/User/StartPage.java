@@ -20,7 +20,7 @@ import javafx.scene.text.Text;
  *
  * @author Wissal
  */
-public class FXMLStartPage implements Initializable {
+public class StartPage implements Initializable {
 
     @FXML
     private Button btnLogIn;

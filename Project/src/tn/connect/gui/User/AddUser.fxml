@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User.gui.AddUser">
+   <children>
+      <SplitPane dividerPositions="0.17839195979899497" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Text fx:id="titleSave" fill="#003366" layoutX="60.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register now it's quick and easy" textAlignment="CENTER" wrappingWidth="350.541015625">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label fx:id="tFirstName" layoutX="23.0" layoutY="14.0" text="First Name" />
+                  <TextField fx:id="tfFirstName" layoutX="99.0" layoutY="12.0" opacity="0.71" prefHeight="25.0" prefWidth="195.0" promptText="Your name" />
+                  <TextField fx:id="tfLastName" layoutX="100.0" layoutY="48.0" opacity="0.7" prefHeight="25.0" prefWidth="195.0" promptText="Family name" />
+                  <TextField fx:id="tfEmail" layoutX="101.0" layoutY="87.0" opacity="0.7" prefHeight="25.0" prefWidth="195.0" promptText="Exemple: wissal.yermani@esprit.tn" />
+                  <DatePicker fx:id="tfdate" layoutX="100.0" layoutY="170.0" opacity="0.7" prefHeight="25.0" prefWidth="195.0" promptText="JJ/MM/AAAA" />
+                  <RadioButton fx:id="rbw" layoutX="96.0" layoutY="252.0" mnemonicParsing="false" text="Women" />
+                  <RadioButton fx:id="rbM" layoutX="188.0" layoutY="252.0" mnemonicParsing="false" text="Men" />
+                  <PasswordField fx:id="tfPassword" layoutX="102.0" layoutY="128.0" prefHeight="25.0" prefWidth="195.0" promptText="New password" />
+                  <Label fx:id="tLastName" layoutX="24.0" layoutY="52.0" text="Last Name" />
+                  <Label fx:id="tEmail" layoutX="24.0" layoutY="91.0" text="E-mail" />
+                  <Label fx:id="tPassword" layoutX="21.0" layoutY="132.0" text="Password" />
+                  <Label fx:id="tDateB" layoutX="18.0" layoutY="174.0" text="Date of birth " />
+                  <Label fx:id="tGender" layoutX="13.0" layoutY="252.0" text="Gender ?">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnSave" layoutX="276.0" layoutY="270.0" mnemonicParsing="false" onAction="#AddUser" opacity="0.7" prefHeight="34.0" prefWidth="159.0" style="-fx-background-color: #003366;" text="Register now" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="tClub" layoutX="33.0" layoutY="212.0" text="Club" />
+                  <TextField fx:id="tfFirstName1" layoutX="-194.0" layoutY="182.0" opacity="0.71" prefHeight="25.0" prefWidth="195.0" promptText="Your name" />
+                  <PasswordField fx:id="tfClub" layoutX="98.0" layoutY="210.0" prefHeight="25.0" prefWidth="195.0" promptText="Your club ?" />
+                  <ImageView fx:id="lgSave" fitHeight="93.0" fitWidth="216.0" layoutX="333.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../ConnectProject/Project/src/tn/connect/media/BluesGreyGradient.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

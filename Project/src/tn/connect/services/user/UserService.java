@@ -29,22 +29,22 @@ public class UserService {
     
     public void addUser(User u) throws SQLException{
         
-        String sql = "INSERT INTO user(name_user, lastName_user) VALUES (?,?);";
+        String sql = "INSERT INTO user(FirstName, LastName, Club, Email, Password,DateBirth, Gender) VALUES (?,?);";
         PreparedStatement pre= cnx.prepareStatement(sql);
         
-        pre.setString(1,u.getName_user());
-        pre.setString(2,u.getlastName_user());
+        pre.setString(1,u.getFirstName());
+        pre.setString(2,u.getLastName());
         pre.executeUpdate();
         
     }
     
     
     public void updateUser(User u)throws SQLException{
-         String sql = "UPDATE INTO user(name_user, lastName_user) VALUES (?,?);";
+         String sql = "UPDATE user set FirstName where id_user=5 VALUES (?,?);";
         PreparedStatement pre= cnx.prepareStatement(sql);
         
-        pre.setString(1,u.getName_user());
-        pre.setString(2,u.getlastName_user());
+        pre.setString(5,u.getFirstName());
+        pre.setString(2,u.getLastName());
         pre.executeUpdate(sql);
         System.out.println("UPDATE Done");
         
@@ -74,8 +74,8 @@ public class UserService {
         while (rs.next()){
             User u = new User();
             u.setId_user(rs.getInt("id_user"));
-            u.setName_user(rs.getString(2));
-            u.setlastName_user(rs.getString("lastName_user"));
+            u.setFirstName(rs.getString(2));
+            u.setLastName(rs.getString("LastName"));
             user.add(u);
         }
           return user;  

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User.gui.SignInController">
+   <children>
+      <ImageView fitHeight="130.0" fitWidth="212.0" layoutX="63.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../ConnectProject/Project/src/tn/connect/media/BluesGreyGradient.png" />
+         </image>
+      </ImageView>
+      <Pane focusTraversable="true" layoutX="83.0" layoutY="94.0" opacity="0.68" prefHeight="299.0" prefWidth="356.0">
+         <children>
+            <Label layoutX="64.0" layoutY="93.0" text="Email" />
+            <Label layoutX="53.0" layoutY="138.0" text="Password" />
+            <Text layoutX="37.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log inKeep abreast of developments in your professional world" wrappingWidth="258.265625">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="tfemailSign" layoutX="112.0" layoutY="89.0" prefHeight="25.0" prefWidth="163.0" promptText="E-mail/ User Name" />
+            <Hyperlink layoutX="112.0" layoutY="174.0" text="Forgot your password ?">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Hyperlink>
+            <Button fx:id="btnLog" layoutX="115.0" layoutY="219.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="163.0" style="-fx-background-color: #003366;" text="Log In" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <PasswordField layoutX="112.0" layoutY="134.0" prefHeight="25.0" prefWidth="163.0" promptText="Your Password" text="tfPassSign" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
